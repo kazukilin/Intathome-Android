@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/light"
+                android:layout_width="180dp"
+                android:layout_height="256dp"
+                android:background="#888"
+                android:onClick="light"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/lightsetting"
+                tools:ignore="OnClick" />
+
+            <ImageButton
+                android:id="@+id/fuzai"
+                android:layout_width="180dp"
+                android:layout_height="256dp"
+                android:background="#888"
+                android:onClick="fuzai"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/fuzai"
+                tools:ignore="MissingConstraints,OnClick"
+                tools:layout_editor_absoluteX="192dp"
+                tools:layout_editor_absoluteY="0dp" />
+        </LinearLayout>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/help"
+                android:layout_width="180dp"
+                android:layout_height="256dp"
+                android:background="#888"
+                android:onClick="help"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/help"
+                tools:ignore="MissingConstraints,OnClick"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="256dp" />
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/copyright"
+                    android:layout_width="180dp"
+                    android:layout_height="128dp"
+                    android:background="#888"
+                    android:onClick="copyright"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/copyright"
+                    tools:ignore="MissingConstraints,OnClick"
+                    tools:layout_editor_absoluteX="180dp"
+                    tools:layout_editor_absoluteY="256dp" />
+
+                <ImageButton
+                    android:id="@+id/feedback"
+                    android:layout_width="180dp"
+                    android:layout_height="128dp"
+                    android:background="#888"
+                    android:onClick="feedback"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/feedback"
+                    tools:ignore="MissingConstraints,OnClick"
+                    tools:layout_editor_absoluteX="180dp"
+                    tools:layout_editor_absoluteY="384dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
