@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/fuzaiset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="不在時の自動応答設定" />
+
+        <Button
+            android:id="@+id/new_massage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="新規メッセージ録音開始" />
+
+        <Button
+            android:id="@+id/rerec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="音声を再生" />
+
+
+        <Button
+            android:id="@+id/fuzai_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="保存" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
