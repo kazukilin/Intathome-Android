@@ -35,21 +35,17 @@ public class LightSetting extends Activity {
             @Override
             public void onClick(View view) {
                 String url = "http://intathome.azurewebsites.net/api/light";
-
                 String s_sec1 = (String)start_sec1.getSelectedItem();
                 String s_sec2 = (String)start_sec2.getSelectedItem();
                 String e_sec1 = (String)end_sec1.getSelectedItem();
                 String e_sec2 = (String)end_sec2.getSelectedItem();
                 String l_sec = light_sec.getText().toString();
-
                 String start_sec = s_sec1 + s_sec2;
                 String end_sec = e_sec1 + e_sec2;
                 boolean func = true;
                 if(light_dis.isChecked()) func = false;
                 String time = l_sec;
-
                 String Json = "{\"begin\":\""+start_sec+"\",\"end\":\""+end_sec+"\",\"function\":"+func+",\"ontime\":\""+time+"\"}";
-
                 JsonPost task = new JsonPost();
                 task.execute(url,Json);
                 GetLightJson tasks = new GetLightJson();
@@ -57,7 +53,6 @@ public class LightSetting extends Activity {
                 finish();
             }
         });
-
     }
 
     @Override

@@ -11,12 +11,9 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Toast;
 
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 
 public class FuzaiSetting extends Activity implements MediaPlayer.OnCompletionListener {
     public static boolean Func;
@@ -84,8 +81,8 @@ public class FuzaiSetting extends Activity implements MediaPlayer.OnCompletionLi
         });
     }
 
-    private MediaRecorder mediarecorder; //録音用のメディアレコーダークラス
-    static final String filePath = "/data/data/com.example.fujis.intathome/files/recorded.mp4"; //録音用のファイルパス
+    private MediaRecorder mediarecorder;
+    static final String filePath = "/data/data/com.example.fujis.intathome/files/recorded.mp4";
     private int state = 0;
 
     private void startMediaRecord() {
@@ -151,8 +148,7 @@ public class FuzaiSetting extends Activity implements MediaPlayer.OnCompletionLi
 
     public void dec64(){
         try {
-            FileInputStream fileInputStream;
-            fileInputStream = new FileInputStream(new File(filePath));
+            FileInputStream fileInputStream = new FileInputStream(new File(filePath));
             byte[] readBytes = new byte[fileInputStream.available()];
             fileInputStream.read(readBytes);
             String res = Base64.encodeToString(readBytes, Base64.NO_WRAP);

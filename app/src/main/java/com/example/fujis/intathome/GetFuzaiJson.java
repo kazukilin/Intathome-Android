@@ -24,7 +24,6 @@ public class GetFuzaiJson extends AsyncTask<String,Void,String> {
         return str;
     }
 
-
     @Override
     protected void onPostExecute(String str) {
         str = str.replace("\\","");

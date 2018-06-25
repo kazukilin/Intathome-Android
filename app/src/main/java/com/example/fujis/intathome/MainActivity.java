@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
         ImageButton fuzai = findViewById(R.id.fuzai);
         fuzai.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -29,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
         ImageButton help = findViewById(R.id.help);
         help.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -38,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
         ImageButton copyright = findViewById(R.id.copyright);
         copyright.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -47,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
         ImageButton feedback = findViewById(R.id.feedback);
         feedback.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -61,5 +57,4 @@ public class MainActivity extends AppCompatActivity {
         GetFuzaiJson task_f = new GetFuzaiJson();
         task_f.execute("http://intathome.azurewebsites.net/api/response");
     }
-
 }
